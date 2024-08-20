@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/ola/aws-demos/dev/CreateDynamoDBTable/CreateDynamoDBTable.csproj": {}
+  },
+  "projects": {
+    "/home/ola/aws-demos/dev/CreateDynamoDBTable/CreateDynamoDBTable.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ola/aws-demos/dev/CreateDynamoDBTable/CreateDynamoDBTable.csproj",
+        "projectName": "CreateDynamoDBTable",
+        "projectPath": "/home/ola/aws-demos/dev/CreateDynamoDBTable/CreateDynamoDBTable.csproj",
+        "packagesPath": "/home/ola/.nuget/packages/",
+        "outputPath": "/home/ola/aws-demos/dev/CreateDynamoDBTable/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ola/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AWSSDK.DynamoDBv2": {
+              "target": "Package",
+              "version": "[3.7.400.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.408/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

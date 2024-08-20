@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HtA+E7g3aHdvVVSVMQUC84UV5cDgmlDctIwH5cNE+LpWRiH+i9OZbqNvTR0mS5kEFiA4KGef9haugaXff7rFGQ==",
+  "success": true,
+  "projectFilePath": "/home/ola/aws-demos/dev/CreateDynamoDBTable/CreateDynamoDBTable.csproj",
+  "expectedPackageFiles": [
+    "/home/ola/.nuget/packages/awssdk.core/3.7.400.7/awssdk.core.3.7.400.7.nupkg.sha512",
+    "/home/ola/.nuget/packages/awssdk.dynamodbv2/3.7.400.7/awssdk.dynamodbv2.3.7.400.7.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,90 @@
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  'AWS::CloudFormation::Designer':
+    ff1c4565-6401-495b-a43f-4a0530f151bc:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 170
+        'y': 40
+      z: 0
+    1ccad275-6ae2-4f4b-b406-21828649f46f:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 210
+        'y': 220
+      z: 0
+      dependson:
+        - ff1c4565-6401-495b-a43f-4a0530f151bc
+    898ddd86-be70-4153-b446-b1273230f874:
+      source:
+        id: 1ccad275-6ae2-4f4b-b406-21828649f46f
+      target:
+        id: ff1c4565-6401-495b-a43f-4a0530f151bc
+      z: 1
+    ca60f624-87cc-441f-866d-506e6db240d6:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 117
+        'y': 129
+      z: 0
+      dependson:
+        - ff1c4565-6401-495b-a43f-4a0530f151bc
+    4fe63a82-c7ff-4607-8e5a-c8511fcfb1c8:
+      source:
+        id: ca60f624-87cc-441f-866d-506e6db240d6
+      target:
+        id: ff1c4565-6401-495b-a43f-4a0530f151bc
+      z: 2
+    d177a3b4-3956-4430-a1d5-49d5a4fd786a:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 516
+        'y': 79
+      z: 0
+      dependson:
+        - ff1c4565-6401-495b-a43f-4a0530f151bc
+    eb628d60-1406-4bcd-a889-7f5cbbf5dce4:
+      source:
+        id: d177a3b4-3956-4430-a1d5-49d5a4fd786a
+      target:
+        id: ff1c4565-6401-495b-a43f-4a0530f151bc
+      z: 3
+Resources:
+  EC2I4PHZP:
+    Type: 'AWS::EC2::Instance'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: ff1c4565-6401-495b-a43f-4a0530f151bc
+  EC2NI4OEA8:
+    Type: 'AWS::EC2::NetworkInterface'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 1ccad275-6ae2-4f4b-b406-21828649f46f
+    DependsOn:
+      - EC2I4PHZP
+  EC2KP6AOF:
+    Type: 'AWS::EC2::KeyPair'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: ca60f624-87cc-441f-866d-506e6db240d6
+    DependsOn:
+      - EC2I4PHZP
+  DDBT3FY54:
+    Type: 'AWS::DynamoDB::Table'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: d177a3b4-3956-4430-a1d5-49d5a4fd786a
+    DependsOn:
+      - EC2I4PHZP

@@ -1,0 +1,34 @@
+# AWS S3
+.s3*
+
+# AWS Lambda
+.lambda*
+
+# AWS DynamoDB
+.dynamodb*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyi
+*.egg-info/
+dist/
+build/
+*.egg
+*.log
+
+# TypeScript
+node_modules/
+dist/
+
+*.js
+!jest.config.js
+*.d.ts
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out

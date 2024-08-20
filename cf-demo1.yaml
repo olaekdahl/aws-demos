@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A simple CloudFormation template for an EC2 instance.
+
+Resources:
+  SimpleEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0440d3b780d96b29d  # Replace YourAMI-ID with an actual AMI ID.
+      InstanceType: t2.micro  # You can change the instance type as needed.
+# aws cloudformation create-stack --stack-name cf-demo1 --template-body file://cf-demo1.yaml

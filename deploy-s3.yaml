@@ -1,0 +1,61 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: S3 demo deployment
+
+Resources:
+  MyVPC:
+  Type: AWS::EC2::VPC
+  Properties:
+    CidrBlock:
+      Ref: MyVPCCIDRRange
+    EnableDnsSupport: false
+    EnableDnsHostnames: false
+    InstanceTenancy: default
+MySubnet:
+  Type: AWS::EC2::Subnet
+  Properties:
+    CidrBlock:
+      Ref: MyVPCCIDRRange
+    VpcId:
+      Ref: MyVPC
+MyInstance:
+  Type: AWS::EC2::Instance
+  Properties:
+    ImageId:
+      Fn::FindInMap:
+        - AWSRegionToAMI
+        - Ref: AWS::Region
+        - "64"
+    SecurityGroupIds:
+      - Fn::GetAtt:
+          - MyVPC
+          - DefaultSecurityGroup
+    SubnetId:
+      Ref: MySubnet
+      
+  BananaBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub '${AWS::StackName}-s3-bucket'
+
+  SimpleEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref ImageId
+      InstanceType: t2.micro
+      UserData:
+        Fn::Base64:
+          !Sub |
+            #!/bin/bash
+            yum install nginx -y
+      Tags:
+        - Key: Name
+          Value: MySimpleEC2Instance
+        - Key: Environment
+          Value: Development
+        - Key: Owner
+          Value: ola
+
+# Outputs:
+#   BucketName:
+#     Description: The name of the S3 bucket
+#     Value: !Ref BananaBucket
