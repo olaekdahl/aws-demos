@@ -10,6 +10,8 @@ logger.setLevel("INFO")
 # Initialize the DynamoDB resource
 dynamodb = boto3.resource('dynamodb')
 
+# this is a test....
+
 # Define the table name
 table_name = 'Notes'
 table = dynamodb.Table(table_name)
