@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CreateDynamoDBTable")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c555ad9892dafb8654b284a4444156c12dab5fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("CreateDynamoDBTable")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CreateDynamoDBTable")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
